@@ -1,0 +1,16 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.vspx
+*.vsp
+*.csproj.user
+
+# Binários e builds
+bin/
+obj/
+*.exe
+*.dll
+
+# Outros arquivos que causam erro
+FileContentIndex/

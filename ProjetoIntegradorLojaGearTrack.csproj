@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9AA91585-DA56-41A4-A941-14937F64077D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjetoIntegradorLojaGearTrack</RootNamespace>
+    <AssemblyName>ProjetoIntegradorLojaGearTrack</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategoriaCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategoriaCadastro.Designer.cs">
+      <DependentUpon>FrmCategoriaCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategoriaEdicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategoriaEdicao.Designer.cs">
+      <DependentUpon>FrmCategoriaEdicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategoriaExclusao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategoriaExclusao.Designer.cs">
+      <DependentUpon>FrmCategoriaExclusao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategoriasListagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategoriasListagem.Designer.cs">
+      <DependentUpon>FrmCategoriasListagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClienteCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClienteCadastro.Designer.cs">
+      <DependentUpon>FrmClienteCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClienteEdicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClienteEdicao.Designer.cs">
+      <DependentUpon>FrmClienteEdicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClienteExclusao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClienteExclusao.Designer.cs">
+      <DependentUpon>FrmClienteExclusao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClientesListagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientesListagem.Designer.cs">
+      <DependentUpon>FrmClientesListagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompraRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompraRegistro.Designer.cs">
+      <DependentUpon>FrmCompraRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmComprasHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmComprasHistorico.Designer.cs">
+      <DependentUpon>FrmComprasHistorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFornecedorCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFornecedorCadastro.Designer.cs">
+      <DependentUpon>FrmFornecedorCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFornecedorEdicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFornecedorEdicao.Designer.cs">
+      <DependentUpon>FrmFornecedorEdicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFornecedoresListagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFornecedoresListagem.Designer.cs">
+      <DependentUpon>FrmFornecedoresListagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFornecedorExclusao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFornecedorExclusao.Designer.cs">
+      <DependentUpon>FrmFornecedorExclusao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMarcaCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarcaCadastro.Designer.cs">
+      <DependentUpon>FrmMarcaCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMarcaEdicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarcaEdicao.Designer.cs">
+      <DependentUpon>FrmMarcaEdicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMarcaExclusao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarcaExclusao.Designer.cs">
+      <DependentUpon>FrmMarcaExclusao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMarcasListagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarcasListagem.Designer.cs">
+      <DependentUpon>FrmMarcasListagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProdutoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProdutoCadastro.Designer.cs">
+      <DependentUpon>FrmProdutoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProdutoEdicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProdutoEdicao.Designer.cs">
+      <DependentUpon>FrmProdutoEdicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProdutoExclusao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProdutoExclusao.Designer.cs">
+      <DependentUpon>FrmProdutoExclusao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProdutosListagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProdutosListagem.Designer.cs">
+      <DependentUpon>FrmProdutosListagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioEstoqueAtual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioEstoqueAtual.Designer.cs">
+      <DependentUpon>FrmRelatorioEstoqueAtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioFinanceiro.Designer.cs">
+      <DependentUpon>FrmRelatorioFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioVendasPorPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioVendasPorPeriodo.Designer.cs">
+      <DependentUpon>FrmRelatorioVendasPorPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarioCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarioCadastro.Designer.cs">
+      <DependentUpon>FrmUsuarioCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarioPermissoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarioPermissoes.Designer.cs">
+      <DependentUpon>FrmUsuarioPermissoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVendaRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVendaRegistro.Designer.cs">
+      <DependentUpon>FrmVendaRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVendasHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVendasHistorico.Designer.cs">
+      <DependentUpon>FrmVendasHistorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategoriaCadastro.resx">
+      <DependentUpon>FrmCategoriaCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategoriaEdicao.resx">
+      <DependentUpon>FrmCategoriaEdicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategoriaExclusao.resx">
+      <DependentUpon>FrmCategoriaExclusao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategoriasListagem.resx">
+      <DependentUpon>FrmCategoriasListagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClienteCadastro.resx">
+      <DependentUpon>FrmClienteCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClienteEdicao.resx">
+      <DependentUpon>FrmClienteEdicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClienteExclusao.resx">
+      <DependentUpon>FrmClienteExclusao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientesListagem.resx">
+      <DependentUpon>FrmClientesListagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompraRegistro.resx">
+      <DependentUpon>FrmCompraRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmComprasHistorico.resx">
+      <DependentUpon>FrmComprasHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFornecedorCadastro.resx">
+      <DependentUpon>FrmFornecedorCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFornecedorEdicao.resx">
+      <DependentUpon>FrmFornecedorEdicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFornecedoresListagem.resx">
+      <DependentUpon>FrmFornecedoresListagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFornecedorExclusao.resx">
+      <DependentUpon>FrmFornecedorExclusao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarcaCadastro.resx">
+      <DependentUpon>FrmMarcaCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarcaEdicao.resx">
+      <DependentUpon>FrmMarcaEdicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarcaExclusao.resx">
+      <DependentUpon>FrmMarcaExclusao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarcasListagem.resx">
+      <DependentUpon>FrmMarcasListagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProdutoCadastro.resx">
+      <DependentUpon>FrmProdutoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProdutoEdicao.resx">
+      <DependentUpon>FrmProdutoEdicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProdutoExclusao.resx">
+      <DependentUpon>FrmProdutoExclusao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProdutosListagem.resx">
+      <DependentUpon>FrmProdutosListagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioEstoqueAtual.resx">
+      <DependentUpon>FrmRelatorioEstoqueAtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioFinanceiro.resx">
+      <DependentUpon>FrmRelatorioFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioVendasPorPeriodo.resx">
+      <DependentUpon>FrmRelatorioVendasPorPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarioCadastro.resx">
+      <DependentUpon>FrmUsuarioCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarioPermissoes.resx">
+      <DependentUpon>FrmUsuarioPermissoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVendaRegistro.resx">
+      <DependentUpon>FrmVendaRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVendasHistorico.resx">
+      <DependentUpon>FrmVendasHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
