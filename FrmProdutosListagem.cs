@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -24,23 +25,38 @@ namespace ProjetoIntegradorLojaGearTrack
         }
         public void CarregarGrid()
         {
-            using (var conn = new SqlConnection(Database.ConnectionString))
-            using (var cmd = new SqlCommand(
-                "SELECT id_produto, nomePro, descricaoPro, precoPro, quantidade_estoque, id_categoria, id_marca FROM Produtos", conn))
+            using (SqlConnection conn = new SqlConnection(Database.ConnectionString))
             {
-                conn.Open();
-                var dt = new DataTable();
-                dt.Load(cmd.ExecuteReader());
-                dgvProdutos.DataSource = dt;
+                string query = @"
+            SELECT 
+                id_produto, 
+                nomePro, 
+                descricaoPro, 
+                precoCompra, 
+                precoVenda, 
+                quantidade_estoque, 
+                id_categoria, 
+                id_marca 
+            FROM Produtos";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    var dt = new DataTable();
+                    dt.Load(cmd.ExecuteReader());
+                    dgvProdutos.DataSource = dt;
+                }
+
+                dgvProdutos.Columns["id_produto"].HeaderText = "ID";
+                dgvProdutos.Columns["nomePro"].HeaderText = "Nome";
+                dgvProdutos.Columns["descricaoPro"].HeaderText = "Descrição";
+                dgvProdutos.Columns["precoCompra"].HeaderText = "Preço de Compra";
+                dgvProdutos.Columns["precoVenda"].HeaderText = "Preço de Venda";
+                dgvProdutos.Columns["quantidade_estoque"].HeaderText = "Estoque";
+                dgvProdutos.Columns["id_categoria"].HeaderText = "Categoria";
+                dgvProdutos.Columns["id_marca"].HeaderText = "Marca";
             }
 
-            dgvProdutos.Columns["id_produto"].HeaderText = "ID";
-            dgvProdutos.Columns["nomePro"].HeaderText = "Nome";
-            dgvProdutos.Columns["descricaoPro"].HeaderText = "Descrição";
-            dgvProdutos.Columns["precoPro"].HeaderText = "Preço";
-            dgvProdutos.Columns["quantidade_estoque"].HeaderText = "Estoque";
-            dgvProdutos.Columns["id_categoria"].HeaderText = "Categoria";
-            dgvProdutos.Columns["id_marca"].HeaderText = "Marca";
         }
         private void Editar()
         {
@@ -53,7 +69,7 @@ namespace ProjetoIntegradorLojaGearTrack
 
         private void Excluir()
         {
-           
+
         }
 
         private void FrmProdutosListagem_Load(object sender, EventArgs e)
@@ -68,26 +84,73 @@ namespace ProjetoIntegradorLojaGearTrack
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (dgvProdutos.CurrentRow == null) return;
-            int id = (int)dgvProdutos.CurrentRow.Cells["id_produto"].Value;
-            if (MessageBox.Show("Confirma exclusão?", "Excluir",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (dgvProdutos.CurrentRow != null && dgvProdutos.CurrentRow.Index >= 0)
             {
-                using (var conn = new SqlConnection(Database.ConnectionString))
-                using (var cmd = new SqlCommand(
-                    "DELETE FROM Produtos WHERE id_categoria=@id", conn))
+                int idProduto = Convert.ToInt32(dgvProdutos.CurrentRow.Cells["id_produto"].Value);
+
+                DialogResult result = MessageBox.Show("Deseja realmente excluir o produto?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
+                    using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["GearTrackConnection"].ConnectionString))
+                    {
+                        conn.Open();
+
+                        SqlTransaction transacao = conn.BeginTransaction();
+
+                        try
+                        {
+                            // Exclui primeiro da tabela ItemVenda
+                            using (var cmd1 = new SqlCommand("DELETE FROM ItemVenda WHERE id_produto = @id", conn, transacao))
+                            {
+                                cmd1.Parameters.AddWithValue("@id", idProduto);
+                                cmd1.ExecuteNonQuery();
+                            }
+
+                            // Exclui da tabela ItemCompra
+                            using (var cmd2 = new SqlCommand("DELETE FROM ItemCompra WHERE IdProduto = @id", conn, transacao))
+                            {
+                                cmd2.Parameters.AddWithValue("@id", idProduto);
+                                cmd2.ExecuteNonQuery();
+                            }
+
+                            // Por fim, exclui da tabela Produtos
+                            using (var cmd3 = new SqlCommand("DELETE FROM Produtos WHERE id_produto = @id", conn, transacao))
+                            {
+                                cmd3.Parameters.AddWithValue("@id", idProduto);
+                                cmd3.ExecuteNonQuery();
+                            }
+
+                            transacao.Commit();
+
+                            MessageBox.Show("Produto excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CarregarGrid(); // Atualiza a lista
+                        }
+                        catch (Exception ex)
+                        {
+                            transacao.Rollback();
+                            MessageBox.Show("Erro ao excluir produto: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
-                CarregarGrid();
             }
+            else
+            {
+                MessageBox.Show("Selecione um produto para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
+
+
+

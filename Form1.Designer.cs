@@ -69,18 +69,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(52, 389);
+            this.label2.Location = new System.Drawing.Point(62, 389);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 17);
+            this.label2.Size = new System.Drawing.Size(128, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Create an account?";
             // 
             // login_registerBtn
             // 
             this.login_registerBtn.BackColor = System.Drawing.Color.DimGray;
-            this.login_registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_registerBtn.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_registerBtn.ForeColor = System.Drawing.SystemColors.Window;
             this.login_registerBtn.Location = new System.Drawing.Point(10, 409);
             this.login_registerBtn.Name = "login_registerBtn";
@@ -110,10 +110,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(298, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 28);
+            this.label1.Size = new System.Drawing.Size(89, 26);
             this.label1.TabIndex = 3;
             this.label1.Text = "SIGN IN";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -121,20 +121,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
             this.label3.Location = new System.Drawing.Point(300, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 15);
+            this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Password:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(300, 151);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 15);
+            this.label4.Size = new System.Drawing.Size(74, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Username:";
             // 
@@ -154,9 +154,10 @@
             // login_showPass
             // 
             this.login_showPass.AutoSize = true;
+            this.login_showPass.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_showPass.Location = new System.Drawing.Point(303, 254);
             this.login_showPass.Name = "login_showPass";
-            this.login_showPass.Size = new System.Drawing.Size(102, 17);
+            this.login_showPass.Size = new System.Drawing.Size(110, 19);
             this.login_showPass.TabIndex = 8;
             this.login_showPass.Text = "Show Password";
             this.login_showPass.UseVisualStyleBackColor = true;

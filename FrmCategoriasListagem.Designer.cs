@@ -55,9 +55,9 @@
             // btnAtualizar
             // 
             this.btnAtualizar.BackColor = System.Drawing.Color.DimGray;
-            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
             this.btnAtualizar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAtualizar.Location = new System.Drawing.Point(553, 11);
+            this.btnAtualizar.Location = new System.Drawing.Point(710, 12);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(88, 37);
             this.btnAtualizar.TabIndex = 3;
@@ -69,12 +69,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DimGray;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
             this.label1.Location = new System.Drawing.Point(35, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 28);
+            this.label1.Size = new System.Drawing.Size(196, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "Lista de categorias";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -82,9 +82,9 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(346, 11);
+            this.button2.Location = new System.Drawing.Point(503, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 37);
             this.button2.TabIndex = 1;
@@ -95,9 +95,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(448, 11);
+            this.button1.Location = new System.Drawing.Point(605, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 37);
             this.button1.TabIndex = 0;

@@ -22,7 +22,7 @@ namespace ProjetoIntegradorLojaGearTrack
         private void FrmProdutoCadastro_Load(object sender, EventArgs e)
         {
             CarregarCategorias();
-            CarregarMarcas();
+            CarregarMarcas(); 
         }
         private void CarregarCategorias()
         {
@@ -71,15 +71,16 @@ namespace ProjetoIntegradorLojaGearTrack
 
             using (var conn = new SqlConnection(Database.ConnectionString))
             using (var cmd = new SqlCommand(
-                "INSERT INTO Produtos (nomePro, descricaoPro, precoPro, quantidade_estoque, id_categoria, id_marca) " +
-                "VALUES (@n,@d,@p,@q,@c,@m)", conn))
+                @"INSERT INTO Produtos (nomePro, descricaoPro, precoCompra, precoVenda, quantidade_estoque, id_categoria, id_marca)
+                     VALUES (@nome, @desc, @precoCompra, @precoVenda, @quantidade_estoque, @idCat, @idMarca)", conn))
             {
-                cmd.Parameters.AddWithValue("@n", txtNomeProduto.Text);
-                cmd.Parameters.AddWithValue("@d", txtDescricao.Text);
-                cmd.Parameters.AddWithValue("@p", decimal.Parse(txtPreco.Text));
-                cmd.Parameters.AddWithValue("@q", int.Parse(txtQuantidade.Text));
-                cmd.Parameters.AddWithValue("@c", (int)cboCategoria.SelectedValue);
-                cmd.Parameters.AddWithValue("@m", (int)cboMarca.SelectedValue);
+                cmd.Parameters.AddWithValue("@nome", txtNomeProduto.Text);
+                cmd.Parameters.AddWithValue("@desc", txtDescricao.Text);
+                cmd.Parameters.AddWithValue("@precoCompra", Convert.ToDecimal(txtPrecoCompra.Text));
+                cmd.Parameters.AddWithValue("@precoVenda", Convert.ToDecimal(txtPrecoVenda.Text));
+                cmd.Parameters.AddWithValue("@quantidade_estoque", 0);
+                cmd.Parameters.AddWithValue("@idCat", (int)cboCategoria.SelectedValue);
+                cmd.Parameters.AddWithValue("@idMarca", (int)cboMarca.SelectedValue);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -100,6 +101,21 @@ namespace ProjetoIntegradorLojaGearTrack
         }
 
         private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrecoVenda_TextChanged(object sender, EventArgs e)
         {
 
         }

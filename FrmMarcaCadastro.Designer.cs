@@ -38,11 +38,11 @@
             // btnCancelar_Click
             // 
             this.btnCancelar_Click.BackColor = System.Drawing.Color.DimGray;
-            this.btnCancelar_Click.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar_Click.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
             this.btnCancelar_Click.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar_Click.Location = new System.Drawing.Point(458, 441);
+            this.btnCancelar_Click.Location = new System.Drawing.Point(196, 349);
             this.btnCancelar_Click.Name = "btnCancelar_Click";
-            this.btnCancelar_Click.Size = new System.Drawing.Size(101, 37);
+            this.btnCancelar_Click.Size = new System.Drawing.Size(116, 37);
             this.btnCancelar_Click.TabIndex = 32;
             this.btnCancelar_Click.Text = "Cancelar";
             this.btnCancelar_Click.UseVisualStyleBackColor = false;
@@ -51,11 +51,11 @@
             // btnSalvar_Click
             // 
             this.btnSalvar_Click.BackColor = System.Drawing.Color.DimGray;
-            this.btnSalvar_Click.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar_Click.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
             this.btnSalvar_Click.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar_Click.Location = new System.Drawing.Point(575, 441);
+            this.btnSalvar_Click.Location = new System.Drawing.Point(336, 349);
             this.btnSalvar_Click.Name = "btnSalvar_Click";
-            this.btnSalvar_Click.Size = new System.Drawing.Size(82, 38);
+            this.btnSalvar_Click.Size = new System.Drawing.Size(112, 38);
             this.btnSalvar_Click.TabIndex = 31;
             this.btnSalvar_Click.Text = "Salvar";
             this.btnSalvar_Click.UseVisualStyleBackColor = false;
@@ -65,17 +65,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.DimGray;
-            this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(74, 58);
+            this.label5.Location = new System.Drawing.Point(49, 35);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(278, 28);
+            this.label5.Size = new System.Drawing.Size(248, 26);
             this.label5.TabIndex = 29;
             this.label5.Text = "CADASTRO DE MARCA";
             // 
             // txtNomeMarca
             // 
-            this.txtNomeMarca.Location = new System.Drawing.Point(167, 141);
+            this.txtNomeMarca.Location = new System.Drawing.Point(140, 108);
             this.txtNomeMarca.Name = "txtNomeMarca";
             this.txtNomeMarca.Size = new System.Drawing.Size(205, 20);
             this.txtNomeMarca.TabIndex = 28;
@@ -83,10 +83,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(75, 142);
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
+            this.label1.Location = new System.Drawing.Point(48, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.Size = new System.Drawing.Size(54, 17);
             this.label1.TabIndex = 27;
             this.label1.Text = "NOME:";
             // 
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 500);
+            this.ClientSize = new System.Drawing.Size(460, 399);
             this.Controls.Add(this.btnCancelar_Click);
             this.Controls.Add(this.btnSalvar_Click);
             this.Controls.Add(this.label5);

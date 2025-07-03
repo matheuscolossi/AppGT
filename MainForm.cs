@@ -289,38 +289,72 @@ namespace ProjetoIntegradorLojaGearTrack
 
         private void rEGISTRARCOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new FrmCompraRegistro();
-            frm.ShowDialog();
+            panel3.Controls.Clear();
+            var frmCad = new FrmCompraRegistro
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+            panel3.Controls.Add(frmCad);
+            frmCad.Show();
         }
 
         private void hISTÓRICODECOMPRASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new FrmComprasHistorico();
-            frm.ShowDialog();
+            panel3.Controls.Clear();
+            var frmCad = new FrmComprasHistorico
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+            panel3.Controls.Add(frmCad);
+            frmCad.Show();
         }
 
         private void rEGISTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new FrmVendaRegistro();
-            frm.ShowDialog();
+            panel3.Controls.Clear();
+            var frmCad = new FrmVendaRegistro
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+            panel3.Controls.Add(frmCad);
+            frmCad.Show();
         }
 
         private void hISTÓRICODEVENDASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new FrmVendasHistorico();
-            frm.ShowDialog();
+            panel3.Controls.Clear();
+            var frmCad = new FrmVendasHistorico
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+            panel3.Controls.Add(frmCad);
+            frmCad.Show();
         }
 
         private void vENDASPORPERÍODOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new FrmRelatorioVendasPorPeriodo();
-            frm.ShowDialog();
+          
         }
 
         private void eSTOQUEATUALToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new FrmRelatorioEstoqueAtual();
-            frm.ShowDialog();
+            panel3.Controls.Clear();
+            var frmCad = new FrmRelatorioEstoqueAtual
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+            panel3.Controls.Add(frmCad);
+            frmCad.Show();
         }
 
         private void fINANCEIROToolStripMenuItem_Click(object sender, EventArgs e)
@@ -343,8 +377,15 @@ namespace ProjetoIntegradorLojaGearTrack
 
         private void fINANCEIROToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            var frm = new FrmRelatorioFinanceiro();
-            frm.ShowDialog();
+            panel3.Controls.Clear();
+            var frmCad = new FrmRelatorioFinanceiro
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+            panel3.Controls.Add(frmCad);
+            frmCad.Show();
         }
 
         private void cADASTRARUSUÁRIOToolStripMenuItem_Click_1(object sender, EventArgs e)

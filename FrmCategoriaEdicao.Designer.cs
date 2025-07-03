@@ -41,19 +41,19 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.DimGray;
-            this.label7.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Berlin Sans FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(32, 71);
+            this.label7.Location = new System.Drawing.Point(49, 35);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(185, 28);
+            this.label7.Size = new System.Drawing.Size(175, 26);
             this.label7.TabIndex = 28;
             this.label7.Text = "Editar Categoria";
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(152, 392);
             this.button2.Name = "button2";
@@ -66,7 +66,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(269, 392);
             this.button1.Name = "button1";
@@ -79,16 +79,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(34, 189);
+            this.label6.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
+            this.label6.Location = new System.Drawing.Point(50, 147);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 15);
+            this.label6.Size = new System.Drawing.Size(88, 17);
             this.label6.TabIndex = 22;
             this.label6.Text = "DESCRIÇÃO:";
             // 
             // txtNomeCategoria
             // 
-            this.txtNomeCategoria.Location = new System.Drawing.Point(110, 140);
+            this.txtNomeCategoria.Location = new System.Drawing.Point(143, 99);
             this.txtNomeCategoria.Name = "txtNomeCategoria";
             this.txtNomeCategoria.Size = new System.Drawing.Size(207, 20);
             this.txtNomeCategoria.TabIndex = 18;
@@ -96,17 +96,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 141);
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F);
+            this.label1.Location = new System.Drawing.Point(50, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.Size = new System.Drawing.Size(54, 17);
             this.label1.TabIndex = 16;
             this.label1.Text = "NOME:";
             // 
             // txtDescricaoCategoria
             // 
-            this.txtDescricaoCategoria.Location = new System.Drawing.Point(110, 186);
-            this.txtDescricaoCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescricaoCategoria.Location = new System.Drawing.Point(143, 147);
+            this.txtDescricaoCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescricaoCategoria.Multiline = true;
             this.txtDescricaoCategoria.Name = "txtDescricaoCategoria";
             this.txtDescricaoCategoria.Size = new System.Drawing.Size(207, 109);
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 462);
+            this.ClientSize = new System.Drawing.Size(401, 462);
             this.Controls.Add(this.txtDescricaoCategoria);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);

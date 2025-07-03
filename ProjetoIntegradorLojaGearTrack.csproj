@@ -198,12 +198,6 @@
     <Compile Include="FrmRelatorioFinanceiro.Designer.cs">
       <DependentUpon>FrmRelatorioFinanceiro.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRelatorioVendasPorPeriodo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRelatorioVendasPorPeriodo.Designer.cs">
-      <DependentUpon>FrmRelatorioVendasPorPeriodo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmUsuarioCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,9 +310,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRelatorioFinanceiro.resx">
       <DependentUpon>FrmRelatorioFinanceiro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmRelatorioVendasPorPeriodo.resx">
-      <DependentUpon>FrmRelatorioVendasPorPeriodo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarioCadastro.resx">
       <DependentUpon>FrmUsuarioCadastro.cs</DependentUpon>

@@ -57,7 +57,7 @@ namespace ProjetoIntegradorLojaGearTrack
         {
             using (var conn = new SqlConnection(Database.ConnectionString))
             using (var cmd = new SqlCommand(
-                "SELECT nomePro, descricaoPro, precoPro, quantidade_estoque, id_categoria, id_marca " +
+                "SELECT nomePro, descricaoPro, precoCompra, precoVenda, quantidade_estoque, id_categoria, id_marca\r\n " +
                 "FROM Produtos WHERE id_produto = @id", conn))
             {
                 cmd.Parameters.AddWithValue("@id", _idProduto);
@@ -67,12 +67,12 @@ namespace ProjetoIntegradorLojaGearTrack
                     {
                         txtNomeProduto.Text = dr.GetString(0);
                         txtDescricao.Text = dr.IsDBNull(1) ? "" : dr.GetString(1);
-                        txtPreco.Text = dr.GetDecimal(2).ToString("F2");
-                        txtQuantidade.Text = dr.GetInt32(3).ToString();
+                        txtPrecoCompra.Text = dr.GetDecimal(2).ToString("F2");
+                        txtPrecoVenda.Text = dr.GetDecimal(3).ToString("F2");
+                     
 
-                        // agora sim o SelectedValue funciona
-                        cboCategoria.SelectedValue = dr.GetInt32(4);
-                        cboMarca.SelectedValue = dr.GetInt32(5);
+                        cboCategoria.SelectedValue = dr.GetInt32(5);
+                        cboMarca.SelectedValue = dr.GetInt32(6);
                     }
             }
         }
@@ -90,15 +90,27 @@ namespace ProjetoIntegradorLojaGearTrack
         {
             using (var conn = new SqlConnection(Database.ConnectionString))
             using (var cmd = new SqlCommand(
-                "UPDATE Produtos SET nomePro=@n, descricaoPro=@d, precoPro=@p, quantidade_estoque=@q, " +
-                "id_categoria=@c, id_marca=@m WHERE id_produto=@id", conn))
+                "UPDATE Produtos SET nomePro=@n, descricaoPro=@d, precoCompra=@pCompra, precoVenda=@pVenda, quantidade_estoque=@q, " +
+"id_categoria=@c, id_marca=@m WHERE id_produto=@id"
+, conn))
             {
                 cmd.Parameters.AddWithValue("@n", txtNomeProduto.Text);
                 cmd.Parameters.AddWithValue("@d", txtDescricao.Text);
-                cmd.Parameters.AddWithValue("@p", decimal.Parse(txtPreco.Text));
-                cmd.Parameters.AddWithValue("@q", int.Parse(txtQuantidade.Text));
+                cmd.Parameters.AddWithValue("@pCompra", decimal.Parse(txtPrecoCompra.Text));
+                cmd.Parameters.AddWithValue("@pVenda", decimal.Parse(txtPrecoVenda.Text));
+                cmd.Parameters.AddWithValue("@q", 0);
+
+
+                var selectedValue = cboCategoria.SelectedValue;
+                if (selectedValue == null)
+                {
+                    MessageBox.Show("Please select a valid category.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 cmd.Parameters.AddWithValue("@c", int.Parse(cboCategoria.SelectedValue.ToString()));
                 cmd.Parameters.AddWithValue("@m", int.Parse(cboMarca.SelectedValue.ToString()));
+                
+
                 cmd.Parameters.AddWithValue("@id", _idProduto);
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -112,6 +124,11 @@ namespace ProjetoIntegradorLojaGearTrack
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
