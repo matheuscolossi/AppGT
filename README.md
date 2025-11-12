@@ -1,11 +1,11 @@
-🧭 Sobre o Projeto
+  🧭 *Sobre o Projeto*
 
 GearTrack é um software desktop desenvolvido em C# (.NET Framework) com SQL Server, criado para gerenciar lojas de esportes e lazer.
 O sistema centraliza e automatiza processos como cadastro de produtos, clientes, fornecedores, compras e vendas, além de gerar relatórios gerenciais que auxiliam na tomada de decisões estratégicas.
 
 O projeto foi desenvolvido como parte do Projeto Integrador III do curso de Ciência da Computação na URI Erechim, aplicando princípios de Engenharia de Software, Modelagem de Dados Relacional e Padrões de Projeto.
 
-⚙️ Funcionalidades Principais
+  ⚙️ *Funcionalidades Principais*
 
 Cadastro e gerenciamento de produtos, clientes, fornecedores, marcas e categorias
 
@@ -21,7 +21,7 @@ Login seguro com senhas criptografadas
 
 Interface intuitiva e responsiva para desktop
 
-🧩 Tecnologias Utilizadas
+  🧩 *Tecnologias Utilizadas*
 
 C# (Windows Forms)
 
@@ -33,7 +33,7 @@ Git / GitHub para controle de versão
 
 Padrão Repository para separar lógica de dados e regras de negócio
 
-🧠 Arquitetura e Estrutura
+  🧠 *Arquitetura e Estrutura*
 
 O projeto segue uma arquitetura em camadas, com separação entre:
 
@@ -45,7 +45,7 @@ Camada de Dados: integração segura com o banco via SQL Server.
 
 Cada módulo (Clientes, Produtos, Fornecedores, Vendas, etc.) possui formulários e classes específicos, facilitando a manutenção e escalabilidade.
 
-🔒 Segurança e Conformidade
+  🔒 *Segurança e Conformidade*
 
 Senhas criptografadas no banco de dados.
 
